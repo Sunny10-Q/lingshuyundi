@@ -1,0 +1,21 @@
+application:
+  version: v1.0
+logging:
+  config: classpath:logback-spring.xml
+spring:
+  application:
+    name: chain-cloud-ms-work
+  profiles:
+    active: local
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+cc:
+  swagger:
+    package-path: com.sunny.ms.work.controller
+    title: 灵枢云递 - work微服务接口文档
+    description: 提供运输任务、取派件任务等相关服务。
+    contact-name: 晴曛
+    contact-url: https://github.com/Sunny10-Q
+    contact-email: 3316361825@qq.com
+    version: ${application.version}

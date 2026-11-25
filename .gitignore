@@ -1,0 +1,7 @@
+.idea
+target/
+*.iml
+# 项目级文档（不随仓库上传，服务级 README 保留）
+/AGENTS.md
+/CLAUDE.md
+/README.md

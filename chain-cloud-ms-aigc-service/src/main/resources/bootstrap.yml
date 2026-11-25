@@ -1,0 +1,29 @@
+application:
+  version: v1.0
+logging:
+  config: classpath:logback-spring.xml
+spring:
+  application:
+    name: chain-cloud-ms-aigc
+  profiles:
+    active: local
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-circular-references: true
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 10000
+        read-timeout: 1000000
+cc:
+  swagger:
+    package-path: com.sunny.ms.aigc.controller
+    title: 灵枢云递 - AIGC微服务接口文档
+    description: 该微服务完成AI相关的业务服务。
+    contact-name: 晴曛
+    contact-url: https://github.com/Sunny10-Q
+    contact-email: 3316361825@qq.com
+    version: ${application.version}

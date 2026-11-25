@@ -1,0 +1,35 @@
+package com.sunny.gateway.filter;
+
+import com.itheima.auth.sdk.dto.AuthUserInfoDTO;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.gateway.filter.GatewayFilter;
+import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
+import org.springframework.stereotype.Component;
+
+/**
+ * 用户端token拦截处理
+ */
+@Slf4j
+@Component
+public class CustomerTokenGatewayFilterFactory extends AbstractGatewayFilterFactory<Object> implements AuthFilter {
+
+    @Override
+    public GatewayFilter apply(Object config) {
+        return null;
+    }
+
+    @Override
+    public AuthUserInfoDTO check(String token) {
+        return null;
+    }
+
+    @Override
+    public Boolean auth(String token, AuthUserInfoDTO authUserInfoDTO, String path) {
+        return null;
+    }
+
+    @Override
+    public String tokenHeaderName() {
+        return null;
+    }
+}
